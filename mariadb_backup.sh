@@ -15,7 +15,6 @@ DBPASS="root"
 #define DB Name
 DB[0]='DB1'
 DB[1]='DB2'
-DB[2]='DB3'
 
 echo "Starting"
 
@@ -23,7 +22,7 @@ echo "Starting"
 for i in "${DB[@]}"
 do
 	echo "Starting dump $i"
-	/usr/bin/mysqldump  -h $HOST -u$DBNAME -p$DBPASS $i > $PATH$i.sql
+	/usr/bin/mysqldump  -h $HOST -u$DBNAME -p$DBPASS $i > $PATH/$i.sql
 	echo "Finished dump $i"
 done
 echo "---------------------"
