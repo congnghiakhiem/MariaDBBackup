@@ -4,7 +4,8 @@ MONTH=$(/bin/date +%Y%m)
 DATE=$(/bin/date +%Y%m%d)
 
 #define PATH
-PATH=/path/to/destination/
+#PATH=/path/to/destination/
+PATH=/var/mysql_backup
 
 #define DB
 HOST="IP"
