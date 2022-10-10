@@ -1,4 +1,4 @@
-#!/bash/sh
+#!/bin/bash
 #date
 MONTH=$(/bin/date +%Y%m)
 DATE=$(/bin/date +%Y%m%d)
@@ -23,7 +23,7 @@ echo "Starting"
 for i in "${DB[@]}"
 do
 	echo "Starting dump $i"
-	/usr/local/bin/mysqldump  -h $HOST -u$DBNAME -p$DBPASS $i > $PATH$i.sql
+	/usr/bin/mysqldump  -h $HOST -u$DBNAME -p$DBPASS $i > $PATH$i.sql
 	echo "Finished dump $i"
 done
 echo "---------------------"
